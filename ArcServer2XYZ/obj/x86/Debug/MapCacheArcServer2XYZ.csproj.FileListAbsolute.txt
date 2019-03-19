@@ -1,0 +1,5 @@
+F:\项目代码\2019\200\8MapCache\MapCacheArcServer2XYZ\MapCacheArcServer2XYZ\bin\Debug\MapCacheArcServer2XYZ.exe
+F:\项目代码\2019\200\8MapCache\MapCacheArcServer2XYZ\MapCacheArcServer2XYZ\bin\Debug\MapCacheArcServer2XYZ.pdb
+F:\项目代码\2019\200\8MapCache\MapCacheArcServer2XYZ\MapCacheArcServer2XYZ\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\项目代码\2019\200\8MapCache\MapCacheArcServer2XYZ\MapCacheArcServer2XYZ\obj\x86\Debug\MapCacheArcServer2XYZ.exe
+F:\项目代码\2019\200\8MapCache\MapCacheArcServer2XYZ\MapCacheArcServer2XYZ\obj\x86\Debug\MapCacheArcServer2XYZ.pdb
