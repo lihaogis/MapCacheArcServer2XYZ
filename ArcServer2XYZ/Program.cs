@@ -11,7 +11,7 @@ namespace MapCacheArcServer2XYZ
         static void Main(string[] args)
         {
             Arc2XYZ();
-            Console.WriteLine("装换完成,输入任意键结束！");
+            Console.WriteLine("转换完成,输入任意键结束！");
             Console.ReadLine();
         }
 
