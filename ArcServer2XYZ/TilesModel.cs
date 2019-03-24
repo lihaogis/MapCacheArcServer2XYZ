@@ -32,13 +32,15 @@ namespace MapCacheArcServer2XYZ
             get { return _tile_column; }
             set { _tile_column = value; }
         }
-        private string _tile_data;
+        private Byte[] _tile_data;
 
-        public string Tile_data
+        public Byte[] Tile_data
         {
             get { return _tile_data; }
             set { _tile_data = value; }
         }
+
+        
         #endregion
     }
 }

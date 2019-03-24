@@ -14,7 +14,7 @@ namespace MapCacheArcServer2XYZ
     public abstract class DbHelperSQLite
     {
         //数据库连接字符串(web.config来配置)，可以动态更改connectionString支持多数据库.		
-        public static string connectionString = "";
+        public static string connectionString = "Data Source=E:\\MapTilesDB.db;Pooling=true;FailIfMissing=false";
         public DbHelperSQLite()
         {
         }

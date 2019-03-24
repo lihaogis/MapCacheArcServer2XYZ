@@ -10,7 +10,11 @@ namespace MapCacheArcServer2XYZ
     {
         static void Main(string[] args)
         {
+            //ArcGISServer切片转换成符合谷歌地图（高德地图）地图切片标准（Z/Y/X）
             Arc2XYZ();
+            //测试图片流
+            //Form1 f = new Form1();
+            //f.Show();
             Console.WriteLine("转换完成,输入任意键结束！");
             Console.ReadLine();
         }
@@ -55,13 +59,26 @@ namespace MapCacheArcServer2XYZ
                         #region X值转换
                         byte[] bytes = File.ReadAllBytes(cf.FullName.ToString());
                         int x = Convert.ToInt32(Path.GetFileNameWithoutExtension(cf.FullName).Replace("C", "0x"), 16);
-                        File.Copy(cf.FullName, (path.Substring(0, path.LastIndexOf("\\")) + "\\NewMapCache\\" + z.ToString() + "\\" + y.ToString()+"\\"+x.ToString()+".png"));
+                        File.Copy(cf.FullName, (path.Substring(0, path.LastIndexOf("\\")) + "\\NewMapCache\\" + z.ToString() + "\\" + y.ToString() + "\\" + x.ToString() + ".png"));
+                        //把png图片保存到Mbtiles文件
+                        //Import2MbTiles(z, y, x, bytes);
                         Console.WriteLine(cf.FullName.ToString());
                         #endregion
                     }
                 }
 
             }
+        }
+
+        //把png图片保存到Mbtiles文件
+        private static void Import2MbTiles(int z, int y, int x, byte[] bytes)
+        {
+            MapCacheArcServer2XYZ.TilesModel tmodel = new TilesModel();
+            tmodel.Zoom_level = z.ToString();
+            tmodel.Tile_row = y.ToString();
+            tmodel.Tile_column = x.ToString();
+            tmodel.Tile_data = bytes;
+            bool b = MapCacheArcServer2XYZ.TilesDAL.Add(tmodel);
         }
     }
 }
