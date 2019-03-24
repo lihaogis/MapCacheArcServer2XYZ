@@ -53,6 +53,7 @@ namespace MapCacheArcServer2XYZ
                     foreach (FileInfo cf in files)
                     {
                         #region X值转换
+                        byte[] bytes = File.ReadAllBytes(cf.FullName.ToString());
                         int x = Convert.ToInt32(Path.GetFileNameWithoutExtension(cf.FullName).Replace("C", "0x"), 16);
                         File.Copy(cf.FullName, (path.Substring(0, path.LastIndexOf("\\")) + "\\NewMapCache\\" + z.ToString() + "\\" + y.ToString()+"\\"+x.ToString()+".png"));
                         Console.WriteLine(cf.FullName.ToString());
